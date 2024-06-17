@@ -1,0 +1,30 @@
+
+ {{#if usersArr}}
+ <h1 class="title"> {{title}}</h1>
+ <div class="users-block">
+  {{#each usersArr}}
+      <div class="user-card">
+         <a href="/users/{{id}}">
+        <h2 class="user-name">{{name}}</h2>
+        <div class="user-photo">
+          {{#if imgName}}
+            <img src="/img/{{imgName}}" alt="{{name}}" />
+          {{else}}
+            <img src="/img/no-image-icon.png" />
+          {{/if}}
+        </div>
+        <p class="user-city">
+        {{#if city}}
+          {{city}}
+        {{else}}
+          Город не указан
+        {{/if}}
+        </p>
+          </a>
+      </div>
+  {{/each}}
+{{else}}
+<h1 class="title"> Нет ни одного зарегистрированного пользователя</h1>
+{{/if}}
+
+</div>

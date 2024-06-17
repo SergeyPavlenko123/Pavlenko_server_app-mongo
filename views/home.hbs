@@ -1,0 +1,41 @@
+<form action="/" method="post" enctype="multipart/form-data">
+  <fieldset>
+    <legend>регистрация нового пользователя</legend>
+    <fieldset>
+      <legend>персональные данные</legend>
+      <div class="input-group">
+        <label for="user_name">Укажите имя пользователя:</label>
+        <input
+          type="text"
+          id="user_name"
+          name="name"
+          placeholder="Имя пользователя"
+          required
+        />
+        <label for="city">Откуда вы:</label>
+        <input type="text" name="user_city" id="city" />
+        <label for="user_photo">Добавить фото к профилю:</label>
+        <input type="file" name="img_file" id="user_photo" />
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>немного о себе</legend>
+      <textarea
+        placeholder="Расскажите немного о себе"
+        name="description"
+      ></textarea>
+      </fieldset>
+     <fieldset>
+       <legend>Ваши увлечения</legend>
+      <textarea
+        placeholder="Расскажите о Ваших увлечениях,хобби"
+        name="hobby"
+      ></textarea>
+     </fieldset>
+    </fieldset>
+   <div class="form-buttons">
+     <input type="submit" class="form-button" />
+    <input type="reset" class="form-button" />
+   </div>
+  </fieldset>
+</form>

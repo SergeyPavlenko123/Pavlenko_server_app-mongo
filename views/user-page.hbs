@@ -1,0 +1,43 @@
+<div class="user-page">
+  <div class="user-photo-block">
+    <h1>{{title}}</h1>
+    <div class="user-photo">
+      {{#if obj.imgName}}
+        <img src="/img/{{obj.imgName}}" alt="{{name}}" />
+      {{else}}
+        <img src="/img/no-image-icon.png" />
+      {{/if}}
+    </div>
+  </div>
+  <div class="user-info-block">
+    <h2>О себе</h2>
+    <p>
+      {{#if description}}
+        {{description}}
+      {{else}}
+        <p>Пользователь ничего не указал</p>
+      {{/if}}
+      <h2>Откуда:</h2>
+      {{#if city}}
+        <p>{{city}}</p>
+      {{else}}
+        <p>Пользователь ничего не указал</p>
+      {{/if}}
+      <h2>Увлечения и хобби:</h2>
+      {{#if hobby}}
+        <p>{{hobby}}</p>
+      {{else}}
+        <p>Пользователь ничего не указал</p>
+      {{/if}}
+      <div class="user-card-buttons">
+        <button
+          type="button"
+          data-id="{{obj.id}}"
+          title="Удалить учетную запись"
+          class="button-remove"
+        >Удалить учетную запись</button>
+        <a href="/users/edit/{{obj.id}}">Редактировать учетную запись</a>
+      </div>
+    </p>
+  </div>
+</div>
